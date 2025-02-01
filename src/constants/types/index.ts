@@ -10,7 +10,7 @@ export interface Stat {
   }
 
   export interface Member {
-    id:any;
+    id: string ;
     name: string;
     category: string;
     joinedOn: string;

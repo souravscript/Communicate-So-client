@@ -70,7 +70,7 @@ const Activities = () => {
     ]);
   }, []);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     onDrop,
     accept: { 'application/pdf': ['.pdf'] }, // Only accept PDF files
   });

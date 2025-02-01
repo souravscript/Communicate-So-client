@@ -161,15 +161,15 @@ const dummyStats: Stat[] = [
 //   ];
 export default function Home() {
   const mockMembers: Member[] = [
-    { id: 1, name: "Troy Chen", category: "Sales", joinedOn: "20th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 2, name: "Emmalynn Irwin", category: "Sales", joinedOn: "20th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 3, name: "Emmalyn Camacho", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 4, name: "Francisco Riggs", category: "Technology", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 5, name: "Trenton Pickett", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 6, name: "Emmalyn Pena", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 7, name: "Beckett Cline", category: "Technology", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 8, name: "Rayne Hunt", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
-    { id: 9, name: "Cael Roth", category: "Sales", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "1", name: "Troy Chen", category: "Sales", joinedOn: "20th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "2", name: "Emmalynn Irwin", category: "Sales", joinedOn: "20th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "3", name: "Emmalyn Camacho", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "4", name: "Francisco Riggs", category: "Technology", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "5", name: "Trenton Pickett", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "6", name: "Emmalyn Pena", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "7", name: "Beckett Cline", category: "Technology", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "8", name: "Rayne Hunt", category: "Business", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
+    { id: "9", name: "Cael Roth", category: "Sales", joinedOn: "19th July 2024", lastLogin: "27th Sep 2024" },
   ];
   
   const mockCategories: Category[] = [

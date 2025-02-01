@@ -33,7 +33,7 @@ interface MemberListProps {
 
 const MemberList: React.FC<MemberListProps> = ({ members, categories }) => {
   const [newMember, setNewMember] = useState<Member>({
-    id: members.length + 1,
+    id: String(Math.floor(Math.random() * 1000000) + Date.now()),
     name: "",
     category: "",
     joinedOn: new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }),
@@ -42,7 +42,7 @@ const MemberList: React.FC<MemberListProps> = ({ members, categories }) => {
   const [newCategory, setNewCategory] = useState<string>("");
   const [currentMembers, setCurrentMembers] = useState<Member[]>(members);
   const [currentCategories, setCurrentCategories] = useState<Category[]>(categories);
-  const [selectedMembers, setSelectedMembers] = useState<number[]>([]);
+  const [selectedMembers, setSelectedMembers] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
@@ -52,11 +52,11 @@ const MemberList: React.FC<MemberListProps> = ({ members, categories }) => {
       return;
     }
   
-    const newId = Math.floor(Math.random() * 1000000) + Date.now(); // Random ID
+    const newId = String(Math.floor(Math.random() * 1000000) + Date.now()); // Random ID
   
     setCurrentMembers([...currentMembers, { ...newMember, id: newId }]);
     setNewMember({
-      id: null,
+      id: "",
       name: "",
       category: "",
       joinedOn: new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }),
