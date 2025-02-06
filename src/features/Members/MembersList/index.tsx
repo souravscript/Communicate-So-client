@@ -206,7 +206,7 @@ const MemberList: React.FC<MemberListProps> = ({ members, categories }) => {
           </Button>
         ))}
       </div>
-      <Table>
+      <Table className="border border-[#E2E8F0]">
         <TableHeader>
           <TableRow>
             <TableHead>

@@ -127,6 +127,7 @@
 // export default Sidebar;
 
 "use client";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { LayoutDashboard, BetweenHorizontalStart, BetweenHorizontalEnd, User } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -142,12 +143,18 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const pathName = usePathname();
   return pathName.startsWith("/auth/") ? null : (
     <div
-      className={`fixed inset-y-0 left-0 min-h-screen w-64 bg-[#2c3e50] text-white p-5 transition-transform duration-300 ease-in-out 
+      className={`fixed inset-y-0 left-0 min-h-screen w-64 bg-[#22273F] text-white p-5 transition-transform duration-300 ease-in-out 
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
         md:translate-x-0 md:block hidden`}
     >
       {/* Logo */}
-      <h1 className="text-2xl mb-8 text-center">Logo</h1>
+      <div className="flex gap-4">
+        <Avatar>
+          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarFallback>CN</AvatarFallback>
+        </Avatar>
+        <h1 className="text-2xl mb-8 text-center">Shivam</h1>
+      </div>
 
       {/* Navigation */}
       <div className="flex flex-col space-y-2">

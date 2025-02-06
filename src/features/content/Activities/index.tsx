@@ -93,10 +93,10 @@ const Activities = () => {
   'border-transparent rounded-none p-2 data-[state=active]:border-b-2 data-[state=active]:border-b-primaryColor data-[state=active]:text-primaryColor';
   
   const tabPositions: { [key: string]: string } = {
-    "google-drive": "left-[33.5rem]",
-    "salesforce": "left-[39.2rem]",
-    "pdfs": "left-[36.3rem]",
-    "links": "left-[39.3rem]"
+    "google-drive": "left-[23.5rem]",
+    "salesforce": "left-[23.5rem]",
+    "pdfs": "left-[23.5rem]",
+    "links": "left-[23.5rem]"
   };
   
   
@@ -124,7 +124,7 @@ const Activities = () => {
       <Card className="py-4 px-1 border-none shadow-none">
         <div className="flex items-start w-11/12 justify-between">
           <div className="flex items-center space-x-4">
-            <div className="p-2 bg-gray-50 size-40 flex justify-center items-center rounded-lg">
+            <div className={`p-2 bg-gray-50 size-40 flex justify-center items-center rounded-lg`}>
               {activity.icon}
             </div>
             <div className='flex flex-col'>
@@ -231,7 +231,7 @@ const Activities = () => {
   );
   
   return (
-    <div className="space-y-6 mt-4 relative left-4">
+    <div className="space-y-6 mt-4">
       <div className="flex flex-col justify-between">
         
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-auto">

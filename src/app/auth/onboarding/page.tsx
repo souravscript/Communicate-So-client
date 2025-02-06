@@ -79,7 +79,7 @@ const Auth = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center min-h-screen w-[373px] relative left-[-8rem]">
+      <div className="flex justify-center items-center w-[373px] relative left-[-24rem] top-[10rem]">
         <div className="auth w-full max-w-sm">
           <div className="flex justify-center my-5 items-center gap-2 pl-2">
             <Image src={logo} alt="logo" className="h-8 w-8" />

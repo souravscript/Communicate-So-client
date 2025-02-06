@@ -103,7 +103,7 @@ const RecentQueriesTable = () => {
         <h2 className="text-xl font-bold">Recent Queries</h2>
         <a href="#" className="text-blue-500 hover:underline">See More</a>
       </div>
-      <table className="w-full border-mutedForeground  shadow-md rounded-lg">
+      <table className="w-full border border-[#E2E8F0] rounded-2xl">
         <thead>
           <tr>
             <th className="text-left py-2 px-6 border-b bg-white opacity-55 font-sans">Category</th>

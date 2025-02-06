@@ -136,7 +136,7 @@ const ConnectedDataSources: React.FC = () => {
         <h2 className="text-xl font-bold">Recently Connected Data Sources</h2>
         <button className="text-blue-500 hover:underline">Add New</button>
       </div>
-      <table className="w-full table-fixed border-collapse mb-8 shadow-md rounded-lg">
+      <table className="w-full table-fixed border border-[#E2E8F0] mb-8 shadow-md rounded-lg">
         <thead className='mb-4'>
           <tr>
             <th className="text-left px-4 py-2 border-b opacity-55 bg-white w-1/3">Source</th>

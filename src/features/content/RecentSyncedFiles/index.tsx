@@ -17,7 +17,7 @@ interface FileListProps {
 
 const RecentlySyncedFiles: React.FC<FileListProps> = ({ files }) => {
   return (
-    <div className="py-4 sm:p-6 relative top-[-1.4rem]  w-[1090px] bg-white">
+    <div className="py-4 sm:p-6 relative left-[-1.4rem] top-[-1.4rem] max-w-[1080px] bg-white">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-4">
         <h2 className="text-lg sm:text-xl font-semibold">
@@ -31,8 +31,8 @@ const RecentlySyncedFiles: React.FC<FileListProps> = ({ files }) => {
       </div>
 
       {/* Table Section */}
-      <div className="overflow-x-auto shadow-md w-[1080px] ">
-        <Table className="w-full ">
+      <div className="overflow-x-auto w-[1080px] ">
+        <Table className="w-full border border-[#E2E8F0] ">
           <TableHeader>
             <TableRow>
               <TableHead>File Name</TableHead>

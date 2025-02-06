@@ -39,7 +39,7 @@ interface StatSectionProps {
   
   const StatSection: React.FC<StatSectionProps> = ({ stats = [], statTitle }) => {
     return (
-      <div className="flex flex-col items-start max-w-[1080px] gap-4 mt-2 w-full">
+      <div className="flex flex-col items-start gap-4 mt-2 w-[1080px]">
         <h1 className="text-2xl font-bold">{statTitle}</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
           {stats.map((stat, index) => (

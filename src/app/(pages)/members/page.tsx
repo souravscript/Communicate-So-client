@@ -178,33 +178,11 @@ export default function Home() {
     { name: "Technology" },
   ];
   
-  // const mockQueryData: QueryData[] = [
-  //   { date: "2024-01-01", sales: 10, technology: 5, business: 8, total: 23 },
-  //   { date: "2024-01-02", sales: 15, technology: 7, business: 10, total: 32 },
-  //   { date: "2024-01-03", sales: 20, technology: 10, business: 12, total: 42 },
-  //   { date: "2024-01-04", sales: 18, technology: 8, business: 15, total: 41 },
-  //   { date: "2024-01-05", sales: 25, technology: 12, business: 18, total: 55 },
-  //   { date: "2024-01-06", sales: 22, technology: 9, business: 20, total: 51 },
-  //   { date: "2024-01-07", sales: 30, technology: 15, business: 25, total: 70 },
-  // ];
-
-      // const handleAddRow = (newRow: any) => {
-      //   setTableData(prevData => [...prevData, newRow]);
-      // };
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  //     const handleAddRow = (newRow: any) => {
-  //               setTableData(prevData => [...prevData, newRow]);
-  //             };
-    
-  //   const handleDeleteRow = (index: number) => {
-  //     setTableData(prevData => prevData.filter((_, i) => i !== index));
-  // };
   return (
     <>
     <div className="flex h-full w-full">
       <div className="flex flex-col p-4 gap-2 items-center w-full basis-2/3 max-w-5xl">
-        <div className=""><StatSection stats={dummyStats} statTitle="Members" /></div>
+        <div className="relative left-10"><StatSection stats={dummyStats} statTitle="Members" /></div>
         <MemberList members={mockMembers} categories={mockCategories}/>
         {/* <UsageAnalytics queryData={mockQueryData} /> */}
         
