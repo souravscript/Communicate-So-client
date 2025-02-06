@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <div className="h-screen w-full">
           <Sidebar isOpen={true} />
-          <main className="relative left-[19rem] max-w-[1080px] overflow-hidden">
+          <main className="relative left-[19rem] max-w-[1150px] overflow-hidden">
             <Navbar />
             <div className="flex justify-center items-center">{children}</div>
           </main>

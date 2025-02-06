@@ -119,7 +119,7 @@ const dummyStats: Stat[] = [
 export default function Home() {
   return (
     <div className="flex">
-      <div className="flex flex-col p-4 gap-2 w-[1180px]">
+      <div className="flex flex-col p-4 gap-2 w-[1080px]">
         <DataSourceUnlockInsights/>
         <div className="mb-6"><StatSection stats={dummyStats} statTitle="Quick Stats" /></div>
         <div className="flex gap-0 relative left-[-1.5rem]">
