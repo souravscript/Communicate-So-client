@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathName=usePathname()
   return pathName.startsWith('/auth/') ? null : (
-    <div className="bg-card py-3 relative left-[-1rem] flex w-full items-center justify-between gap-[12rem] rounded-2xl mt-3">
+    <div className="bg-card py-3 relative flex w-full items-center justify-between gap-[12rem] rounded-2xl mt-3">
       {/* Left Section - Logo */}
       <div className="flex items-center gap-2 pl-6">
         <Image src={logo} alt="logo" className="h-8 w-8" />

@@ -115,7 +115,7 @@ export default function Home() {
       <div className="flex flex-col p-4 gap-2 w-[1180px]">
         <DataSourceUnlockInsights/>
         <div className="mb-6"><StatSection stats={dummyStats} statTitle="Quick Stats" /></div>
-        <div className="flex gap-6 relative left-[-1.8rem]">
+        <div className="flex gap-6 relative left-[-1.5rem]">
             <RecentQueriesTable />
             <ConnectedDataSources/>
         </div>

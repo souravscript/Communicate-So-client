@@ -50,7 +50,7 @@ const dummyStats: Stat[] = [
 
   export default function Home() {
     return (
-      <div className="flex h-full w-full relative left-[-0.7rem]">
+      <div className="flex h-full w-full relative">
         <div className="flex flex-col p-4 gap-8 w-full md:w-[50rem] max-w-5xl">
           <div className="w-full">
             <StatSection stats={dummyStats} statTitle="Content" />

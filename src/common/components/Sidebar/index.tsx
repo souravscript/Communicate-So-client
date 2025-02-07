@@ -143,7 +143,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
   const pathName = usePathname();
   return pathName.startsWith("/auth/") ? null : (
     <div
-      className={`fixed inset-y-0 left-0 min-h-screen w-64 bg-[#22273F] text-white p-5 transition-transform duration-300 ease-in-out 
+      className={` inset-y-0 h-screen w-64 bg-[#22273F] text-white p-5 transition-transform duration-300 ease-in-out 
         ${isOpen ? "translate-x-0" : "-translate-x-full"} 
         md:translate-x-0 md:block hidden`}
     >

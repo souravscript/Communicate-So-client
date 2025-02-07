@@ -24,14 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <div className="h-screen w-full">
+        <div className="h-screen flex w-full">
           <Sidebar isOpen={true} />
-          <main className="relative left-[19rem] max-w-[1150px] overflow-hidden">
+          <main className="relative left-10 max-w-[1280px] overflow-scroll">
             <Navbar />
-            <div className="flex justify-center items-center">{children}</div>
+            <div className="relative left-4">{children}</div>
           </main>
         </div>
-      </body>
+      </body> 
     </html>
   );
 }
