@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <div className="h-screen flex w-full">
           <Sidebar isOpen={true} />
-          <main className="relative left-10 max-w-[1280px] overflow-scroll">
+          <main className="relative left-10 max-w-[1180px] overflow-scroll">
             <Navbar />
             <div className="relative left-4">{children}</div>
           </main>
