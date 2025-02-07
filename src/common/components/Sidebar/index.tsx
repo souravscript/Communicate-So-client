@@ -163,7 +163,7 @@ const Sidebar = ({ isOpen }: { isOpen: boolean }) => {
             key={index}
             href={item.path}
             className={`flex items-center p-2 cursor-pointer transition-colors duration-300 rounded-lg ${
-              pathName === item.path ? "bg-gray-700 text-primaryColor" : "hover:bg-gray-700"
+              pathName === item.path ? "text-primaryColor" : "hover:bg-gray-700"
             }`}
           >
             <span className={`${pathName === item.path ? "text-primaryColor" : ""}`}>{item.icon}</span>

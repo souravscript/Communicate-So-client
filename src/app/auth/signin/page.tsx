@@ -46,7 +46,7 @@ export default function Auth(){
             </div>
           </CardContent>
 
-          <Link href="/auth/signup"><p className='opacity-55 text-sm my-3 mx-6'>Don&quot;t have an account? <span className='text-base opacity-100 text-black font-bold'>Create new</span></p></Link>
+          <Link href="/auth/signup"><p className='text-[#343B46] text-sm my-3 mx-6 flex justify-center '>Don&quot;t have an account? <span className='text-sm opacity-100 text-[#343B46] font-bold'>Create new</span></p></Link>
         </Card>
         <div className="flex justify-between mt-4 text-sm text-blue-500">
         </div>
