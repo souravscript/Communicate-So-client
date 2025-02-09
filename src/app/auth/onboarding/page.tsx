@@ -91,12 +91,16 @@ const Auth = () => {
         </div>
       </div>
 
-      <div className="fixed top-[-1rem] right-96">
-        <Image src={bigVectorOne} alt="logo" className="w-[360px] h-[460px]" />
+      <div className="fixed top-[-1rem] md:top-[-2rem] lg:top-[-3rem] xl:top-[-4rem] 2xl:top-[-5rem] 
+                      right-40 md:right-64 lg:right-80 xl:right-96 2xl:right-[32rem]">
+          <Image src={bigVectorOne} alt="logo" className="w-[280px] h-[360px] md:w-[320px] md:h-[400px] lg:w-[360px] lg:h-[460px] xl:w-[400px] xl:h-[500px] 2xl:w-[440px] 2xl:h-[540px]" />
       </div>
-      <div className="fixed bottom-[-1rem] right-12">
-        <Image src={bigVectorTwo} alt="logo" className="w-[280px] h-[340px]" />
+
+      <div className="fixed bottom-[-1rem] md:bottom-[-2rem] lg:bottom-[-3rem] xl:bottom-[-4rem] 2xl:bottom-[-5rem] 
+                      right-6 md:right-10 lg:right-12 xl:right-16 2xl:right-20">
+          <Image src={bigVectorTwo} alt="logo" className="w-[220px] h-[280px] md:w-[240px] md:h-[300px] lg:w-[280px] lg:h-[340px] xl:w-[300px] xl:h-[360px] 2xl:w-[320px] 2xl:h-[380px]" />
       </div>
+
     </>
   );
 };

@@ -8,12 +8,48 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import {z} from "zod";
+import { supabase } from '@/lib/supabase';
+import { useState } from 'react';
+
+const loginSchema = z.object({
+  email: z.string().email("Invalid email format"),
+  password: z.string().min(6, "Password must be at least 6 characters"),
+});
+
 export default function Auth(){
+  const [formData, setFormData] = useState({ email: "", password: "" });
+  const [error, setError] = useState("");
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError(""); 
+
+    // Validate form data
+    const parsedData = loginSchema.safeParse(formData);
+    if (!parsedData.success) {
+      setError(parsedData.error.errors[0].message);
+      return;
+    }
+
+    // Supabase authentication
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: formData.email,
+      password: formData.password,
+    });
+
+    if (error) {
+      setError(error.message);
+      return;
+    }
+
+    console.log("User logged in:", data);
+  };
     return (
         <>
         
 
-    <div className="flex justify-center items-center w-[600px] relative top-[10rem]">
+    <div className="flex justify-center overflow-hidden items-center w-[600px] relative top-[10rem] z-50">
       <div className="auth w-full max-w-sm">
       <div className="flex justify-center my-5 items-center gap-2 pl-2">
         <Image src={logo} alt="logo" className="h-8 w-8" />
@@ -30,17 +66,35 @@ export default function Auth(){
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input id="email" type="email" placeholder="Typing..." required />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  placeholder="Typing..."value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })} 
+                  required 
+                />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
-                <Input id="password" type="password" required />
+                <Input 
+                  id="password" 
+                  type="password" 
+                  placeholder="Typing..." 
+                  value={formData.password}
+                  onChange={(e) => setFormData({ ...formData, password: e.target.value })} 
+                  required 
+                />
               </div>
+              {error && <p className="text-red-500 text-sm">{error}</p>}
 
-             <Link href="/forgot-password">
+             <Link href="/auth/forgot-password">
                 <p className='opacity-55 text-sm my-4 '>Don&quot;t remember password?</p>
              </Link>
-              <Button type="submit" className="w-full">
+              <Button 
+                onClick={handleLogin} 
+                type="submit" 
+                className="w-full"
+              >
                 Login Now →
               </Button>
             </div>
@@ -52,14 +106,17 @@ export default function Auth(){
         </div>
       </div>
     </div>
-  
+    <div className='fixed top-[-1rem] md:top-[-2rem] lg:top-[-3rem] xl:top-[-4rem] 2xl:top-[-5rem] 
+                    right-[16rem] md:right-[24rem] lg:right-[32rem] xl:right-[40rem] 2xl:right-[48rem] z-20'>
+        <Image src={vectorOne} alt="logo" className='w-[200px] h-[280px] md:w-[220px] md:h-[300px] lg:w-[240px] lg:h-[320px] xl:w-[260px] xl:h-[340px] 2xl:w-[280px] 2xl:h-[360px] '/>
+    </div>
 
-            <div className='fixed top-[-1rem] right-[32rem]'>
-                <Image src={vectorOne} alt="logo" className="w-[240px] h-[320px]"/>
-            </div>
-            <div className='fixed bottom-[-1rem] right-20'>
-                <Image src={bigVectorOne} alt="logo" className="w-[380px] h-[540px]"/>
-            </div>
+    <div className='fixed bottom-[-1rem] md:bottom-[-2rem] lg:bottom-[-3rem] xl:bottom-[-4rem] 2xl:bottom-[-5rem] 
+                    right-10 md:right-16 lg:right-20 xl:right-32 2xl:right-40 z-20'>
+        <Image src={bigVectorOne} alt="logo" className='w-[300px] h-[420px] md:w-[340px] md:h-[480px] lg:w-[380px] lg:h-[540px] xl:w-[420px] xl:h-[580px] 2xl:w-[460px] 2xl:h-[620px] '/>
+    </div>
+
+            
         </>
     )
 }
